@@ -1,7 +1,5 @@
 package recfun
 
-import com.sun.javaws.exceptions.InvalidArgumentException
-
 object Main {
   def main(args: Array[String]) {
     println("Pascal's Triangle")
@@ -23,7 +21,7 @@ object Main {
         else if (c < r)
           pascal (c - 1, r - 1) + pascal(c, r - 1)
         else
-          throw new InvalidArgumentException(Array("Entry not part of table"))
+          throw new IllegalArgumentException
       }
     }
   
